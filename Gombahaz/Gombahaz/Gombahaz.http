@@ -1,0 +1,6 @@
+@Gombahaz_HostAddress = http://localhost:5212
+
+GET {{Gombahaz_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

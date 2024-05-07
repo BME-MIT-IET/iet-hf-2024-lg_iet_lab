@@ -1,0 +1,22 @@
+@use "@material/button/styles";
+@use "@material/button";
+@use "@material/theme";
+
+.title{
+    align-self: center;
+}
+
+.form-field{
+
+    width: 100%;
+}
+
+.spacing
+{
+    flex: 1 1 auto;
+}
+
+.ng-invalid{
+    border-color: red;
+}
+

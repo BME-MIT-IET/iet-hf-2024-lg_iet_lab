@@ -1,0 +1,29 @@
+@use "@material/dialog";
+
+@include dialog.core-styles;
+
+
+.container{
+    margin-top: 80px;
+}
+
+.toolbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index : 999;
+}
+
+.toolbar-title{
+    margin-left: 10px;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.cdk-overlay-container{
+    position: fixed;
+    bottom : 0;
+}
+

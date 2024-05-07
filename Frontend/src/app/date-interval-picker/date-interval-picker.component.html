@@ -1,0 +1,31 @@
+<h6 mat-dialog-title>Grafikon intervallum meghatározása</h6>
+<mat-dialog-content #dateIntervalDialog style="padding-top: 20px;">
+    <form [formGroup]="dateForm" >
+        <mat-form-field class="date-form" appearance="outline">
+            <mat-label>Időintervallum megadása</mat-label>
+            <mat-date-range-input [formGroup]="dateForm" [rangePicker]="picker" [disabled]="allData.checked">
+                <input matStartDate [max]="maxDate" formControlName="start" />
+                <input matEndDate [max]="maxDate" formControlName="end" />
+            </mat-date-range-input>
+            <mat-hint>YYYY/MM/DD - YYYY/MM/DD</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker class="date-range-picker" #picker [ariaValueMax]="maxDate" [disabled]="false || allData.checked"></mat-date-range-picker>
+            @if (dateForm.controls['start'].hasError('matStartDateInvalid')) {
+                <mat-error>Invalid start date</mat-error>
+            }
+             @if (dateForm.controls['end'].hasError('matEndDateInvalid')) {
+                <mat-error>Invalid end date</mat-error>
+             }
+        </mat-form-field>
+        <div>
+            <mat-checkbox color="primary" formControlName="all" #allData>Összes adat lekérdezése</mat-checkbox>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <span class="spacing"></span>
+    <button mat-button (click)="onCancel()" color="warn">MÉGSE</button>
+    <button mat-button color="primary"
+    [mat-dialog-close]="getDataValues(allData.checked)"
+    >SZŰRÉS</button>
+</mat-dialog-actions>

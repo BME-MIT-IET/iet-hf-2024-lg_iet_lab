@@ -1,0 +1,38 @@
+@use "@material/dialog";
+
+@include dialog.core-styles;
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.label{
+    font-weight: bold;
+}
+
+.description{
+    margin-bottom: 10px;
+}
+
+.icon{
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.header-title
+{
+    font-size: 16px;
+}
+
+.action-row {
+    padding-left: 3px;
+}
+
+.lookup-button{
+    align-self:flex-start;
+    margin-left: 0;
+}
+
+.expansion-panel {
+    margin-bottom: 5px;
+}

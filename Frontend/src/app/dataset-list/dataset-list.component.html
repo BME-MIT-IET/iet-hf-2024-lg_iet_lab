@@ -1,0 +1,46 @@
+<div id="dataset-list-component-container">
+    <mat-toolbar class="toolbar" color="primary">
+        <mat-icon class="toolbar-icon">equalizer</mat-icon>
+        <span class="toolbar-title">{{resourceName}}</span>
+        <span class="spacing"></span>
+        <button mat-icon-button [disabled]="error || !datasets.data.length" (click)="exportDataToCsv()">
+            <mat-icon>file_download</mat-icon>
+        </button>
+        <button mat-icon-button [disabled]="error || !datasets.data.length" (click)="navigateToGraphs()">
+            <mat-icon>trending_up</mat-icon>
+        </button>
+        <button #backButton mat-icon-button (click)="progressSpinnerDisplayed=true" [routerLink]="['/resources']">
+            <mat-icon>keyboard_backspace</mat-icon>
+        </button>
+    </mat-toolbar>
+    <mat-table class="table" *ngIf="!error" [dataSource]="datasets" matSort>
+        <ng-container matColumnDef="dataObserved">
+            <mat-header-cell class="d" *matHeaderCellDef mat-sort-header>Rögzítés Dátuma</mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.dataObserved}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="temperature">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Hőmérséklet</mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.temperature}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="humidity">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Páratartalom</mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.humidity}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="coLevel">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>CO szint</mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.coLevel}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="soilMoisture">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Talajnedvesség</mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.soilMoisture}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="soilTemperature">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Talajhőmérséklet</mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.soilTemperature}} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row class="table-row" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <app-progress-spinner [progress-spinner-displayed]="progressSpinnerDisplayed && !error"></app-progress-spinner>
+</div>

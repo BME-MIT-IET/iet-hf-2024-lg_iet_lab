@@ -1,0 +1,23 @@
+<div id="dataset-graph-component-container">
+    <mat-toolbar class="toolbar" color="primary">
+        <mat-icon class="toolbar-icon">trending_up</mat-icon>
+        <span class="toolbar-title">{{resourceName}}</span>
+        <span class="spacing"></span>
+        <button mat-icon-button (click)="openDatePickerDialog()">
+            <mat-icon>date_range</mat-icon>
+        </button>
+        <button mat-icon-button (click)="progressSpinnerDisplayed=true" [routerLink]="['/resources',resourceId,'datasets',{resourceName: resourceName}]">
+            <mat-icon>keyboard_backspace</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div id="dataset-graph-list">
+        <ng-template  ngFor let-item let-i="index" [ngForOf]="chartComponents">
+            <app-chart class="graph-component" #graphs [title]="item.inputs['title']" 
+            [beforeLabelText]="item.inputs['beforeLabelText']"
+            [unitOfMeasure]="item.inputs['unitOfMeasure']"
+            [yAxisLabel]="item.inputs['yAxisLabel']"
+            ></app-chart>
+        </ng-template>
+    </div>
+    <app-progress-spinner [progress-spinner-displayed]="progressSpinnerDisplayed"></app-progress-spinner>
+</div>

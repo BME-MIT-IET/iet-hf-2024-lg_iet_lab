@@ -1,0 +1,35 @@
+<div id="resource_list_container">
+    <div class=resource-list>
+        <mat-toolbar *ngIf="!error" class="toolbar" color="primary">
+            <mat-icon class="toolbar-icon">home</mat-icon>
+            <span class="toolbar-title">Gombaházak</span>
+            <span class="spacer"></span>
+            <button class="icon-button" mat-icon-button (click)="changeOrder()">
+                <mat-icon *ngIf="order == 0">
+                    sort_by_alpha
+                </mat-icon>
+                <mat-icon *ngIf="order == 1" mat-icon-button>
+                    expand_less
+                </mat-icon>
+				<mat-icon *ngIf="order == 2">
+					expand_more
+				</mat-icon>
+            </button>
+            <button class="icon-button" mat-icon-button (click)="displayForm()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </mat-toolbar>
+         <div class="container"> 
+            <ng-template ngFor let-item let-i="index" [ngForOf]="resources">
+                <app-resource-list-elem
+                   [resource]="item"
+                   (removed)="deleteElement(resources[i])"
+                   (modify)="displayFormModify(resources[i])"
+                   (navigate)="progressSpinnerDisplayed = true"
+                ></app-resource-list-elem>
+            </ng-template>
+        </div>
+    </div>
+   <app-progress-spinner [progress-spinner-displayed]="progressSpinnerDisplayed && !error"></app-progress-spinner>
+   <app-snackbar #snackbar></app-snackbar>
+</div>

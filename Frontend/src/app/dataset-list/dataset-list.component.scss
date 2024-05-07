@@ -1,0 +1,58 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+.table-row:hover{
+    background-color: #eeeeee;
+}
+
+.toolbar{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+.toolbar-title{
+    margin-left: 10px;
+}
+
+.spacing{
+    flex: 1 1 auto;
+}
+
+.table{
+    width: 95%;
+    margin-top: 75px;
+    overflow: auto;
+}
+
+.mat-column-dataObserved{
+   justify-content: center;
+}
+
+.mat-column-temperature{
+   justify-content: center;
+}
+
+.mat-column-humidity{
+    justify-content: center;
+}
+
+.mat-column-coLevel{
+    justify-content: center;
+}
+
+.mat-column-soilMoisture{
+    justify-content: center;
+}
+
+.mat-column-soilTemperature{
+    justify-content: center;
+}
+
+#dataset-list-component-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}

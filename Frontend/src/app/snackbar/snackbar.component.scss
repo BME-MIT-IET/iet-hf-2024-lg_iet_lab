@@ -1,0 +1,9 @@
+@use "@material/button/styles";
+@use "@material/button";
+@use "@material/snackbar/mdc-snackbar";
+@use "@material/theme";
+
+.mdc-snackbar--open{
+    position: fixed;
+    bottom: 0;
+}

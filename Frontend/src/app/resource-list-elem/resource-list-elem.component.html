@@ -1,0 +1,29 @@
+<div class="expansion-panel">
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="header">
+                <mat-panel-title class="header-title">
+                    {{resource.name}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-panel-description class="description">
+                <div><span class="label">Cím: </span><span class="value">{{resource.address}}</span></div>
+            </mat-panel-description>
+            <mat-panel-description class="description">
+                <div><span class="label">Méret: </span><span class="value">{{resource.size}}</span></div>
+            </mat-panel-description>
+            <mat-panel-description class="description">
+                <div><span class="label">Leírás: </span><span class="value">{{resource.description}}</span></div>
+            </mat-panel-description>
+            <mat-panel-description class="description">
+                <div><span class="label">Megjegyzés: </span><span class="value">{{resource.comment}}</span></div>
+            </mat-panel-description>
+            <mat-action-row class="action-row">
+                <button mat-button class="lookup-button" (click)="navigateToData()" color="primary" [routerLink]="['../resources',resource.id,'datasets',{resourceName : resource.name}]">ADATOK MEGTEKINTÉSE</button> 
+                <span class="spacer"></span>
+                <button mat-button class="lookup-button" (click)="modifyElement()" ><span style="color:orange">SZERKESZTÉS</span></button> 
+                <button mat-button class="lookup-button" color="warn" (click)="deleteElement()">TÖRLÉS</button> 
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
