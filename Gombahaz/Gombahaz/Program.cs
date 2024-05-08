@@ -11,7 +11,7 @@ builder.Services.AddCors(options => {
     {
         policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
         policy.WithOrigins("http://localhost:8082","https://localhost:8082").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
-        policy.WithOrigins("http://klitechfrontendangular", "https://klitechfrontendangular").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+        policy.WithOrigins("http://ietfrontendangular", "https://ietfrontendangular").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
     });
 });
 
