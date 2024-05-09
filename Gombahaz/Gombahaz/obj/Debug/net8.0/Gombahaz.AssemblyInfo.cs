@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gombahaz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+362d84934fa9324d54c108d06d727d8789c5ca44")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1abffd7e183305226098c45eb8c3e858ecac6e7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gombahaz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gombahaz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

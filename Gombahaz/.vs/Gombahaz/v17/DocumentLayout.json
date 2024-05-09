@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|solutionrelative:gombahaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|solutionrelative:gombahaz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|solutionrelative:gombahaz\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|solutionrelative:gombahaz\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|solutionrelative:gombahaz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\controllers\\datasetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\models\\resourceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|solutionrelative:gombahaz\\models\\resourceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|solutionrelative:gombahaz\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{372273EE-8457-4611-A178-A71CE5146765}|Gombahaz\\Gombahaz.csproj|c:\\users\\tse\\desktop\\iet\\iet_hf\\gombahaz\\gombahaz\\services\\idatasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -123,9 +123,34 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 269,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 350,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResourceController.cs",
+              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\ResourceController.cs",
+              "RelativeDocumentMoniker": "Gombahaz\\Controllers\\ResourceController.cs",
+              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\ResourceController.cs",
+              "RelativeToolTip": "Gombahaz\\Controllers\\ResourceController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-14T18:24:38.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Gombahaz\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.Development.json",
+              "RelativeToolTip": "Gombahaz\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-13T20:56:20.184Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -134,62 +159,14 @@
               "RelativeDocumentMoniker": "Gombahaz\\Program.cs",
               "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Program.cs",
               "RelativeToolTip": "Gombahaz\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAiwA0AAABEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T09:40:53.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Gombahaz\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.Development.json",
-              "RelativeToolTip": "Gombahaz\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-13T20:56:20.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.json",
-              "RelativeDocumentMoniker": "Gombahaz\\appsettings.json",
-              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.json",
-              "RelativeToolTip": "Gombahaz\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-02-19T18:37:53.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataSetController.cs",
-              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\DataSetController.cs",
-              "RelativeDocumentMoniker": "Gombahaz\\Controllers\\DataSetController.cs",
-              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\DataSetController.cs",
-              "RelativeToolTip": "Gombahaz\\Controllers\\DataSetController.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAA8wE8AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-14T18:24:50.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResourceService.cs",
-              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Services\\ResourceService.cs",
-              "RelativeDocumentMoniker": "Gombahaz\\Services\\ResourceService.cs",
-              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Services\\ResourceService.cs",
-              "RelativeToolTip": "Gombahaz\\Services\\ResourceService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwBMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-14T18:25:03.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "20240427112219_datasetitemtest.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Migrations\\20240427112219_datasetitemtest.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Migrations\\20240427112219_datasetitemtest.cs",
@@ -202,18 +179,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ResourceController.cs",
-              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\ResourceController.cs",
-              "RelativeDocumentMoniker": "Gombahaz\\Controllers\\ResourceController.cs",
-              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\ResourceController.cs",
-              "RelativeToolTip": "Gombahaz\\Controllers\\ResourceController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAgAAAA",
+              "Title": "ResourceService.cs",
+              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Services\\ResourceService.cs",
+              "RelativeDocumentMoniker": "Gombahaz\\Services\\ResourceService.cs",
+              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Services\\ResourceService.cs",
+              "RelativeToolTip": "Gombahaz\\Services\\ResourceService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-14T18:24:38.485Z"
+              "WhenOpened": "2024-02-14T18:25:03.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "DataSetController.cs",
+              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\DataSetController.cs",
+              "RelativeDocumentMoniker": "Gombahaz\\Controllers\\DataSetController.cs",
+              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Controllers\\DataSetController.cs",
+              "RelativeToolTip": "Gombahaz\\Controllers\\DataSetController.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAA8wE8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-14T18:24:50.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "DataSetRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Repositories\\DataSetRepository.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Repositories\\DataSetRepository.cs",
@@ -225,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DataSetService.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Services\\DataSetService.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Services\\DataSetService.cs",
@@ -237,7 +226,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Dockerfile",
+              "RelativeDocumentMoniker": "Gombahaz\\Dockerfile",
+              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Dockerfile",
+              "RelativeToolTip": "Gombahaz\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-12T15:15:47.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.json",
+              "RelativeDocumentMoniker": "Gombahaz\\appsettings.json",
+              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\appsettings.json",
+              "RelativeToolTip": "Gombahaz\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-19T18:37:53.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ResourceRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Repositories\\ResourceRepository.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Repositories\\ResourceRepository.cs",
@@ -249,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "20240426195236_dataseeding1.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Migrations\\20240426195236_dataseeding1.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Migrations\\20240426195236_dataseeding1.cs",
@@ -261,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "20240220084211_CreateDatabase.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Migrations\\20240220084211_CreateDatabase.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Migrations\\20240220084211_CreateDatabase.cs",
@@ -273,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\DataContexts\\DataContext.cs",
               "RelativeDocumentMoniker": "Gombahaz\\DataContexts\\DataContext.cs",
@@ -285,19 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Dockerfile",
-              "RelativeDocumentMoniker": "Gombahaz\\Dockerfile",
-              "ToolTip": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Dockerfile",
-              "RelativeToolTip": "Gombahaz\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-12T15:15:47.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DataSetItem.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Models\\DataSetItem.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Models\\DataSetItem.cs",
@@ -309,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ResourceItem.cs",
               "DocumentMoniker": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Models\\ResourceItem.cs",
               "RelativeDocumentMoniker": "Gombahaz\\Models\\ResourceItem.cs",
@@ -476,7 +478,7 @@
           ]
         },
         {
-          "DockedHeight": 131,
+          "DockedHeight": 50,
           "SelectedChildIndex": -1,
           "Children": [
             {
