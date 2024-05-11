@@ -126,18 +126,19 @@ A tesztelés 50 felhasználó esetére történt.
 
 A képen megfigyelhető, hogy a rendszer valóban hasonló átlagos válaszidőt kapott, az összes resource lekérése esethez.
 
-
-
-
 ## Tapasztalatok
 
 ### Get típusú kérések (1.- 3. Teszt esetek)
 
-**A Get végpontokra vonatkozó tesztekkel beláthatóvá vált, hogy a rendszerünk maximum nagyjából 50 felhasználó kiszolgálására képes a GET típusú kérések esetén, ha a terhelés egyenletes jellegű.**
+**A Get végpontokra vonatkozó tesztekkel beláthatóvá vált, hogy a rendszerünk maximum nagyjából 50 felhasználó jó minőségű kiszolgálására képes a GET típusú kérések esetén, ha a terhelés egyenletes jellegű.**
 
-Ez a felhasználó szám természetesen növelhető lenne a hardver erőforrások bővítésével.
+*Fontos kiemelnünk, hogy a tesztek során az 50 felhasználó folytonosan API kérésekkel sorozta a szoftvert és az eredeti feladatspecifikáció alapján már ennyi felhasználó kiszolgálására sem lesz soha szükség.*
 
-A backend technológiában megfontolandó lenne fejlettebb cache-elési, terhelés-elosztási és aszinkron technológiákat használni a jobb teljesítmény érdekében.
+Ha javítani szeretnénk ezen az eredményen:
+
+- A backend technológiában megfontolandó lenne fejlettebb cache-elési, terhelés-elosztási és aszinkron technológiákat használni a jobb teljesítmény érdekében.
+
+- Ez a felhasználó szám természetesen növelhető lenne a hardver erőforrások bővítésével is.
 
 
 
