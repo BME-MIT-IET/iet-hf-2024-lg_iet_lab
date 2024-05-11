@@ -20,7 +20,7 @@
     A teljesítmény tesztek virtuális felhasználókat szimulálnak amik a teszt ideje alatt az adott collectionban lévő HTTP kéréseket küldik folyamatosan és egymással párhuzamosan.
 
 
-![](postman-peldah.png)
+![](postman-pelda.png)
 A postman teljesítmény tesztelő felülete
 
 ### Tesztelő környezet
@@ -29,7 +29,7 @@ A postman teljesítmény tesztelő felülete
 
     A tesztkörnyezet fel van töltve mock adatokkal, a teszteléshez megfelelő mértékben.
 
-![](dockerh.png)
+![](docker.png)
 A dockerben futó project
 
 ### A tesztelő számítógép adatai
@@ -69,7 +69,7 @@ A **Peak** tesztesetek a maximális felhasználó szám 20%-áról indul, majd f
 
 Adatok változását az adatbázis rendszer online felületén érjük el, tartjuk számon.
 
-![](adatbazis_feluleth.png)
+![](adatbazis_felulet.png)
 
 ### 1. Végpont teszt - Minden *Resource* lekérése
 
@@ -85,9 +85,9 @@ Enyhe ingadozás figyelhető meg a felhasználók számának növekedésének el
 
 Alábbi ábrán látható a két eltérő konfiguráció. Szagatott vonallal van jelezve az 50 felhasználós beállítási opció, a folytonossal a 10. A szürke hátterű trapézok jelölik a virtuális felhasználók aktuális számát. Az ábra alatt a 10 felhasználós eset adatai tekinthetőek meg, melyek mellett látható az eltérés az 50 felhasználós esettől.
 
-![](rampupallresh.png)
+![](rampupallres.png)
 
-Talán érdemes kiemelni, hogy az error rate mind a két esetben 0% volt, illetve hogy a maximális késleltetés 50 felhasználó esetén több mint 6x annyi volt mint 10 esetén.
+Talán érdemes kiemelni, hogy az error rate mind a két esetben 0% volt, illetve hogy a maximális késleltetés 50 felhasználó esetén több mint 7x annyi volt mint 10 esetén.
 
  #### Spike
 
@@ -100,32 +100,45 @@ A tesztesetet **50 maximális felhasználóval** végeztük. A kezdeti stabiliz�
 
 Talán elsőre megtévesztő lehet, hogy a késleltetés grafikon csupán egy helyen ugrik meg és gyorsan lecsökken; azonban fontos megfigyelni a késleltetés dimenzió skálázását. Itt a maximális késleltetés a 7000 ms-ot is túllépi, az átlag is sokkal nagyobb értékeket vesz fel mielőtt visszacsillapodik elfogadható szintekre. 
 
-![](peakallresh.png)
+![](peakallres.png)
 
 ### 2. Végpont teszt - Adott azonosítójú *Resource* lekérése
 
 A kéréseket az */api/resource/{{resourceId}}* végpontra küldjük.
 
+Ez az eset nagyon hasonlítana az előzőhöz, csupán minden request csak egyetlen adatot adna vissza. Ezért itt csak demonstrációs jelleggel a **Ramp Up** opciót teszteltük 50 felhasználóra.
+
 #### Ramp Up
-
-- maximum 10 felhasználóval: 
-- maximum 50 felhasználóval:
-
-Alábbi ábrán látható a két konfiguráció közötti különbség.
+ 
+Maximum 50 és 10 felhasználóval tesztelve látható, hogy a korábbi eredményre kísértetiesen hasonlító. A terhelés hasonló pontjain a késleltetés hasonló ingadozáson megy át, azonban itt az átlagos válaszidő töredéke lesz annak amit akkor kapnánk ha az összes adatot lekérnénk az API-tól.
 
 ![](rampupidres.png)
 
- #### Spike
+### 3. Végpont teszt - Resource-hoz tartozó adatok lekérdezése
 
- -maximum 50 felhasználóval
+#### Ramp Up
 
-![](spikeaidres.png)
+Ezen lekérdezés esetén is csak a **Ramp Up** teszt opciót találtuk érdemesnek a dokumentációra. Itt is csupán adatok kerülnek lekérdezésre az API-tól. Itt egy resource-hoz több adatpont is tartozik, így hasonló eredményre számítunk, mint az összes adat lekérése esetén.
 
- #### Peak
+A tesztelés 50 felhasználó esetére történt.
 
-- maximum 50 felhasználóval:
+![](rampupresdatasets.png)
 
-![](peakidres.png)
+A képen megfigyelhető, hogy a rendszer valóban hasonló átlagos válaszidőt kapott, az összes resource lekérése esethez.
+
+
+
+
+## Tapasztalatok
+
+### Get típusú kérések (1.- 3. Teszt esetek)
+
+**A Get végpontokra vonatkozó tesztekkel beláthatóvá vált, hogy a rendszerünk maximum nagyjából 50 felhasználó kiszolgálására képes a GET típusú kérések esetén, ha a terhelés egyenletes jellegű.**
+
+Ez a felhasználó szám természetesen növelhető lenne a hardver erőforrások bővítésével.
+
+A backend technológiában megfontolandó lenne fejlettebb cache-elési, terhelés-elosztási és aszinkron technológiákat használni a jobb teljesítmény érdekében.
+
 
 
 
