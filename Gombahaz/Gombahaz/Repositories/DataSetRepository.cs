@@ -22,7 +22,7 @@ namespace Gombahaz.Repositories
             DataSetItem? retrievedDataSet = await dataContext.DataSets
                 .Include(ds => ds.Resource)
                 .Where(ds => ds.Id == dataSetId)
-                .SingleAsync();
+                .SingleOrDefaultAsync();
             if (retrievedDataSet == null)
                 return null;
 
