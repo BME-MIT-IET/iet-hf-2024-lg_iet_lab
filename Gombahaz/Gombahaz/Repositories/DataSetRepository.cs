@@ -60,7 +60,8 @@ namespace Gombahaz.Repositories
             else
             {
                 dataSetItemsForDateInterval = await dataContext.DataSets
-                    .Where(ds => ds.DataObserved > dateStart && ds.DataObserved < dateEnd).OrderBy(ds => ds.DataObserved)
+                    .Where(ds => ds.Resource == resourceWithSpecifiedId && ds.DataObserved > dateStart && ds.DataObserved < dateEnd)
+                    .OrderBy(ds => ds.DataObserved)
                     .ToListAsync();
             }
            
