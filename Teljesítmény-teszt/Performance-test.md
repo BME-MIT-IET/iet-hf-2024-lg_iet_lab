@@ -116,6 +116,8 @@ Maximum 50 és 10 felhasználóval tesztelve látható, hogy a korábbi eredmén
 
 ### 3. Végpont teszt - Resource-hoz tartozó adatok lekérdezése
 
+*/api/dataset/withresource/{resourceId}*
+
 #### Ramp Up
 
 Ezen lekérdezés esetén is csak a **Ramp Up** teszt opciót találtuk érdemesnek a dokumentációra. Itt is csupán adatok kerülnek lekérdezésre az API-tól. Itt egy resource-hoz több adatpont is tartozik, így hasonló eredményre számítunk, mint az összes adat lekérése esetén.
@@ -126,21 +128,49 @@ A tesztelés 50 felhasználó esetére történt.
 
 A képen megfigyelhető, hogy a rendszer valóban hasonló átlagos válaszidőt kapott, az összes resource lekérése esethez.
 
+### 4. Végpont teszt - Létező *Resource* módosítása
+
+A */api/resource/{resourceId}* végponton elérhető funkció.
+
+Ez az első teszt, mely nem egy Get, hanem egy Put típusú lekérdezést hajt végre. Szerettünk volna egy ilyet is tesztelni, azonban az adatbáziskezelő rendszer a projektben elabsztrahálta a tranzakció kezelést a fejlesztőtől. Ez azért fontos, mert így arra kell számítanunk, hogy nem kapunk hibákat, azonban a válaszidő nagyobb lesz.
+
+#### Ramp Up
+
+50 felhasználó esetén végeztük a tesztet.
+
+Itt érdemes megtekinteni, hogy ahogy felugranak a válaszidők "ramping" kezdetekor akkor az átlagos kérések száma lecsökken, a virtuális userek várakoznak a válaszra az új kérés előtt. Amikor ez a késleltetés csökken, akkor kérések száma ismét növekedni kezd, az eddig várakozó és az új felhasználók is elküldik kéréseiket a szervernek.
+
+Megfigyelendő, hogy a maximális várakozási idő már itt is bőven túllépi az elfogadható határt.
+
+![](rampupeditres.png)
+![](rampupeditrbody.png)
+
 ## Tapasztalatok
 
-### Get típusú kérések (1.- 3. Teszt esetek)
+### Get típusú kérések (1. - 3. Tesztesetek)
 
 **A Get végpontokra vonatkozó tesztekkel beláthatóvá vált, hogy a rendszerünk maximum nagyjából 50 felhasználó jó minőségű kiszolgálására képes a GET típusú kérések esetén, ha a terhelés egyenletes jellegű.**
 
 *Fontos kiemelnünk, hogy a tesztek során az 50 felhasználó folytonosan API kérésekkel sorozta a szoftvert és az eredeti feladatspecifikáció alapján már ennyi felhasználó kiszolgálására sem lesz soha szükség.*
 
-Ha javítani szeretnénk ezen az eredményen:
+**Ha javítani szeretnénk ezen az eredményen:**
 
 - A backend technológiában megfontolandó lenne fejlettebb cache-elési, terhelés-elosztási és aszinkron technológiákat használni a jobb teljesítmény érdekében.
 
+- Az API működése paging funkcionalitás segítségével is bővíthető.
+
 - Ez a felhasználó szám természetesen növelhető lenne a hardver erőforrások bővítésével is.
 
+### Put típusú kérések (4. Teszteset)
 
+*/api/resource/{resourceId}*
+
+Ezek a kérések is kielégítően kezeltek 50 vagy annál kevesebb felhasználót, amennyiben az átlagos válaszidőt használjuk mérési metrikának.
+
+A maximális válaszidő azonban nagyon nagy volt ami már nem elfogadható QoS elvek szerint, a felhasználók nem akarnának sokat várni a válaszokra.
+
+**Javaslatok:**
+- Put request helyett több, különálló Patch kérést bevezetni az API-ba, mely lehetőséget ad csupán egyetlen mező módosítására adott objektumokban. Ez, a megfelelő implementáció mellett, eltüntetné a tranzakciókezelés miatti várakozások többségét. 
 
 
 
