@@ -173,4 +173,16 @@ A maximális válaszidő azonban nagyon nagy volt ami már nem elfogadható QoS 
 - Put request helyett több, különálló Patch kérést bevezetni az API-ba, mely lehetőséget ad csupán egyetlen mező módosítására adott objektumokban. Ez, a megfelelő implementáció mellett, eltüntetné a tranzakciókezelés miatti várakozások többségét. 
 
 
+## Átfogó vélemény a tesztelérsről
+
+### Kovács Zoltán:
+
+Érdekes volt megtapasztalni, ezt az eddig teljesen ismeretlen, oldalát a szoftver tesztelésnek/vizsgálatnak. Új volt, hogy alaposabb utána járás után kiderült mennyire fontos, a tesztek dokumentációja, nem csak a konkrét teszt esetek tekintetében hanem már magánál a tesztelő környezetnél és a kezdő beállításoknál is.
+
+A használt szoftver (Postman) egy hatalmas pozitív csalódás volt. Nagyon ergonomikus a kialakítás szinte minden beállítás könnyen megtalálható valamint remek dokumentációt írtakhozzá. A különböző extra logika hozzáadásához kiváló a javascrypt nagyon könnyen lehet vele beállításokat végezni.
+
+Egyetlen hátráltató tényező a performance tesztek limitált száma volt. Így a szoftver megismerése és az első tesztek lefuttatása után nem sok mozgástér maradt, ezért végeztünk csak ennyi tesztet.
+
+
+
 
