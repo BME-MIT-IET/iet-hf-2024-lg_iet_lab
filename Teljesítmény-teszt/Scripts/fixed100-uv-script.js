@@ -1,7 +1,7 @@
 //a resourceId egy environment változó
 //a validTestSeriaNum enviroment változó, célja, hogy a párhuzamosan dolgozó virtuális userek ellenére is 
 //tudjunk valamilyen egyedi azonosítót hozzá rendelni
-
+//a script rész pre-request mezőjébe kell írni
 
 let res =pm.environment.get("resourceId");
 res++;
