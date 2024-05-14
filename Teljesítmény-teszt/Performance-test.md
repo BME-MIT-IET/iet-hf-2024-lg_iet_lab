@@ -179,10 +179,16 @@ A maximális válaszidő azonban nagyon nagy volt ami már nem elfogadható QoS 
 
 Érdekes volt megtapasztalni, ezt az eddig teljesen ismeretlen, oldalát a szoftver tesztelésnek/vizsgálatnak. Új volt, hogy alaposabb utána járás után kiderült mennyire fontos, a tesztek dokumentációja, nem csak a konkrét teszt esetek tekintetében hanem már magánál a tesztelő környezetnél és a kezdő beállításoknál is.
 
-A használt szoftver (Postman) egy hatalmas pozitív csalódás volt. Nagyon ergonomikus a kialakítás szinte minden beállítás könnyen megtalálható valamint remek dokumentációt írtakhozzá. A különböző extra logika hozzáadásához kiváló a javascrypt nagyon könnyen lehet vele beállításokat végezni.
+A használt szoftver (Postman) egy hatalmas pozitív csalódás volt. Nagyon ergonomikus a kialakítás szinte minden beállítás könnyen megtalálható valamint remek dokumentációt írtakhozzá. A különböző extra logika hozzáadásához kiváló a javascript nagyon könnyen lehet vele beállításokat végezni.
 
 Egyetlen hátráltató tényező a performance tesztek limitált száma volt. Így a szoftver megismerése és az első tesztek lefuttatása után nem sok mozgástér maradt, ezért végeztünk csak ennyi tesztet.
 
+### Szendrey Máté
 
+Ez volt eddigi első projektem ahol ilyen mélységben végeztem teljesítmény tesztelést. A mérések jelentésénel kibogozása és ledokumentálása leginkább különböző adatbázis lekérdezés optimalizációs laborokra emlékeztetett. Hasonló mélységben kellett utána járni a rendszer mögöttes működésének.
+
+A Postmanre eddig mint egy egyszerű primitív API tesztelő eszközre gondoltam. Kellemesen kellett csalódnom, mind ergonómiában, mind a különböző funkciók számosságában messze túlmutatott ezen a képen.
+
+Visszatekintve örülök, hogy ezt az alfeladatot választottam, sokat tanultam belőle.
 
 
