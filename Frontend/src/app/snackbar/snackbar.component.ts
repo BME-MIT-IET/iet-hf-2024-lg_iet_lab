@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { booleanAttribute, Component, inject, Input, numberAttribute } from '@angular/core';
-import { MatSnackBar, MatSnackBarModule, MatSnackBarLabel } from '@angular/material/snack-bar';
+import { booleanAttribute, Component, Input } from '@angular/core';
+import { MatSnackBarModule, MatSnackBarLabel } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-snackbar',

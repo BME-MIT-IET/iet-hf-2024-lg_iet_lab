@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,EventEmitter,Inject,Input,Output, booleanAttribute, numberAttribute } from '@angular/core';
-import { PopupType } from '../enums/pouptype';
+import { Component,EventEmitter,Inject, Output} from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 

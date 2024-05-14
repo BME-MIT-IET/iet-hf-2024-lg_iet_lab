@@ -77,14 +77,14 @@ export class DatasetListComponent {
 			.subscribe({
 				next: (data) => {
 					let datasetArray : Dataset[] = [];
-					for(let i = 0; i < data.length; ++i)
+					for(const element of data)
 					{
-						const dateToConvert : Date = new Date(data[i].dataObserved);
+						const dateToConvert : Date = new Date(element.dataObserved);
 						const splitByYMD = dateToConvert.toISOString().split('T');
 						const splitByHMS = splitByYMD[1].split('.')[0];
 						const convertedConcetanatedDate = splitByYMD[0] + " " + splitByHMS;
-						data[i].dataObserved = convertedConcetanatedDate;
-						datasetArray.push(data[i]);
+						element.dataObserved = convertedConcetanatedDate;
+						datasetArray.push(element);
 					}
 					this.datasets.data = datasetArray;
 					this.progressSpinnerDisplayed = false;
@@ -137,15 +137,15 @@ export class DatasetListComponent {
 
 		let csvContent = this.resourceName+" ház adatrekordjai\n";
 		csvContent += "Megfigyelés dátuma;Hőmérséklet;Páratartalom;CO Szint;Talajnedvesség;Talajhőmérséklet\n"
-		for(let i = 0; i < this.datasets.data.length; ++i)
+		for(const element of this.datasets.data)
 		{
 			csvContent += 
-			this.datasets.data[i].dataObserved + ";" +
-			this.datasets.data[i].temperature + ";" +
-			this.datasets.data[i].humidity + ";" +
-			this.datasets.data[i].coLevel + ";"+
-			this.datasets.data[i].soilMoisture + ";" +
-			this.datasets.data[i].soilTemperature + "\n";
+			element.dataObserved + ";" +
+			element.temperature + ";" +
+			element.humidity + ";" +
+			element.coLevel + ";"+
+			element.soilMoisture + ";" +
+			element.soilTemperature + "\n";
 		}
 		const csvFile = new Blob([ new Uint8Array([0xEF,0xBB,0xBF]),csvContent], {type: "text/csv;charset=utf8"});
 		const objUrl = URL.createObjectURL(csvFile);
