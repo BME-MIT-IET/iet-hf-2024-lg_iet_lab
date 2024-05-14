@@ -58,6 +58,7 @@ A tesztek során a felhasználók számának változását különböző függv�
 - A felhasználók számának fokozatos emelése - **Ramp Up**
 - A felhasználók számának hirtelen megugrása, majd csökkenése - **Spike**
 - A felhasználók számának hirtelen ugrása, bizonyos időintervallumig a csúcson maradása, majd hirtelen csökkenése - **Peak**
+- A felhasználók száma egyenletes a teljes mérés alatt - **Fixed**
 
 A tesztek **60 másodpercig tartanak**. 
 
@@ -144,6 +145,44 @@ Megfigyelendő, hogy a maximális várakozási idő már itt is bőven túllépi
 
 ![](rampupeditres.png)
 ![](rampupeditrbody.png)
+
+### 5. Végpont teszt - Adott Resource-hoz Dataset-ek beszúrása (POST)
+
+*/api/dataset/{{resourceId}}*
+
+#### Fixed
+
+100 Virtuális felhasználó folytonosan szúrta be az újabb és újabb DataSeteket adott Resourcehoz. 
+
+A tesztet 100 virtuális felhasználóval végeztük, ami a tesztelésre használt hardver eszköz maximuma volt. Azért dupláztuk meg az eddig használt felhasználó számot, hogy szimuláljuk, ahogy a sok különböző gombaház beli eszköz mérési adatokat rögzít a rendszerben.
+
+Fontos kiemelnünk, hogy ez messzemenően túlmutat azon a terhelésen aminek a rendszer a specifikációban körülmények között ki lenne téve. Egy gombaházban ugyanis nem 100 hanem jóval kevesebb műszer van, és nem folyamatosan rögzítenek mérési adatokat, hanem bizonyos időközönként.
+
+Ezekre a kérésekre a rendszer egész jól reagált stabilitás szempontjából, csak egy nagyobb ugrás látható a diagramon. A válaszidő maximuma most is kényelmetlenül magas lett; azonban ez majd nem okoz éles környezetben gondot mert ilyen nagyságrendű terhelésnek a rendszer sosem lesz kitéve.
+
+Azért terheltük ennyivel jobban a rendszert ezen teszt során, mint éles helyzetben lenne terhelve, hogy jó képet kapjunk maximális teljesítőképességéről.
+
+![](fixed-100VU-addDataSets.png)
+![](fixed-100VU-body.png)
+
+### 6. Teszt - Komplex kéréssorozat tesztelése
+
+Ezen teszt során...
+
+Lépéssorozat:
+
+![](peak-complex-90VU-performancedetails.png)
+
+
+#### Peak
+
+Azért Peak mert...
+
+Azért 90 VU mert...
+
+Eredmény megmagyarázása, hogyan követte a latency az emelkedőt, milyen a stabilitása, max értéke, átlagos válaszideje...
+
+![](peak-complex-90VU-graph.png)
 
 ## Tapasztalatok
 
