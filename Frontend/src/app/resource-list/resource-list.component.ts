@@ -7,8 +7,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { MatIconButton } from '@angular/material/button';
-import { MatButtonModule } from '@angular/material/button';
+import { MatIconButton, MatButtonModule } from '@angular/material/button';
 import { ProgressSpinnerComponent } from '../progress-spinner/progress-spinner.component';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { PopUpWindowComponent } from '../pop-up-window/pop-up-window.component';
@@ -94,9 +93,9 @@ export class ResourceListComponent implements OnInit{
     ngOnInit(){
       this.resourceService.getAllResources().subscribe({
         next: (data) => {
-            for(let i : number = 0; i < data.length; ++i)
+            for(const element of data)
             {
-                this.resources.push(data[i]);
+                this.resources.push(element);
             }
 			this.progressSpinnerDisplayed = false;
         },

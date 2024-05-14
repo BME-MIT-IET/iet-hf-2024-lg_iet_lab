@@ -1,7 +1,5 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
 import { Component, Injector } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ResourceListComponent } from './resource-list/resource-list.component';
 import { createCustomElement } from '@angular/elements';
 import { PopUpWindowComponent } from './pop-up-window/pop-up-window.component';

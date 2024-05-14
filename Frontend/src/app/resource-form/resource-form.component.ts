@@ -5,7 +5,7 @@ import { FormControl,ReactiveFormsModule, FormGroup, Validators } from '@angular
 import { ResourceService } from '../resource.service';
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogModule } from '@angular/material/dialog';
-import {MatInputModule } from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { PopUpWindowComponent } from '../pop-up-window/pop-up-window.component';
@@ -86,7 +86,6 @@ export class ResourceFormComponent {
 		else this.saveResource();
 	}
 	
-	//TODO: recomment
 	/**
 	 * Saves a new resource with the data from the form.
 	 * 

@@ -1,8 +1,8 @@
 import { Component, QueryList,ViewChildren } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { DatasetService } from '../dataset.service';
-import { CommonModule, NgFor } from '@angular/common';
-import { ActivatedRoute, Data, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { GraphEnum } from '../enums/graphs';
 import { ChartComponent } from '../chart/chart.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -180,17 +180,17 @@ export class DatasetGraphComponent {
 		next: (dataarray) =>
 		{
 			this.chartComponents.forEach(chart => chart.data = [])
-			for(let i = 0; i < dataarray.length; ++i)
+			for(const element of dataarray)
 			{
-				this.chartComponents[GraphEnum.temperature].data.push({date: dataarray[i].dataObserved, value: dataarray[i].temperature});
-				this.chartComponents[GraphEnum.humidity].data.push({date: dataarray[i].dataObserved, value: dataarray[i].humidity});
-				this.chartComponents[GraphEnum.soilmoisture].data.push({date: dataarray[i].dataObserved, value: dataarray[i].soilMoisture});
-				this.chartComponents[GraphEnum.soiltemp].data.push({date: dataarray[i].dataObserved, value: dataarray[i].soilTemperature});
-				this.chartComponents[GraphEnum.colevel].data.push({date: dataarray[i].dataObserved, value: dataarray[i].coLevel});
+				this.chartComponents[GraphEnum.temperature].data.push({date: element.dataObserved, value: element.temperature});
+				this.chartComponents[GraphEnum.humidity].data.push({date: element.dataObserved, value: element.humidity});
+				this.chartComponents[GraphEnum.soilmoisture].data.push({date: element.dataObserved, value: element.soilMoisture});
+				this.chartComponents[GraphEnum.soiltemp].data.push({date: element.dataObserved, value: element.soilTemperature});
+				this.chartComponents[GraphEnum.colevel].data.push({date: element.dataObserved, value: element.coLevel});
 			}
-			for(let i = 0; i < this.chartComponents.length; ++i)
+			for(const element of this.chartComponents)
 			{
-				this.chartComponents[i].chart?.setData(this.chartComponents[i].data);
+				element.chart?.setData(element.data);
 			}
 		},
 		error: (err)=> {

@@ -1,5 +1,5 @@
 	import { CommonModule } from '@angular/common';
-	import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+	import { Component, EventEmitter, Input, Output } from '@angular/core';
 	import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 	import { MatIconModule } from '@angular/material/icon';
 	import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';

@@ -1,6 +1,6 @@
 import { Component,ElementRef,Input, ViewChild } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
-import { ChartData, ChartType, TooltipItem, ChartItem } from 'chart.js';
+import { TooltipItem, ChartItem } from 'chart.js';
 import { Chart } from 'chart.js/auto';
 import { min } from 'rxjs';
 import { CommonModule } from '@angular/common';
