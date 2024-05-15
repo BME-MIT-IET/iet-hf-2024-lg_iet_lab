@@ -43,3 +43,7 @@ Ha a teszteket külön szeretnénk lefuttatni, akkor oda kell figyelni a Collect
 Az API-hoz található a VisualStudio projekt által automatikusan készített Swagger leírás.
 
 ![alt text](src/img7.png)
+
+### Tanulság
+
+Amit megtanultam ebben a házi feladatban az az, hogy a tesztelést komolyan kell venni, és el kell végezni, mert egy olyan projektben is előjöhetnek hibák, amiről a fejlesztő alapesetben úgy gondolta, hogy nagyrészt hibamentes. Továbbá rávilágított arra is a házi feladat, hogy a GitHub-ot hogyan kellene rendesen használni verziókezelésre.
