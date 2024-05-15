@@ -219,7 +219,7 @@ A maximális válaszidő azonban nagyon nagy volt ami már nem elfogadható QoS 
 - Put request helyett több, különálló Patch kérést bevezetni az API-ba, mely lehetőséget ad csupán egyetlen mező módosítására adott objektumokban. Ez, a megfelelő implementáció mellett, eltüntetné a tranzakciókezelés miatti várakozások többségét. 
 
 
-## Átfogó vélemény a tesztelérsről
+## Tapasztalatok a tesztelésről/vizsgálatról
 
 ### Kovács Zoltán
 
