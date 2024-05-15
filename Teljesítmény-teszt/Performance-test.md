@@ -4,20 +4,20 @@
 
 ### A tesztek célja
 
-    Jelen teljesítmény tesztek célja, hogy egy általános átfogó képet kapjunk a IIOT WEBAPPLIKÁCIÓ GOMBATERMESZTŐ HÁZAKHOZ nevű egyetemi projekt Backend API-jának képességeiről.
+Jelen teljesítmény tesztek célja, hogy egy általános átfogó képet kapjunk a IIOT WEBAPPLIKÁCIÓ GOMBATERMESZTŐ HÁZAKHOZ nevű egyetemi projekt Backend API-jának képességeiről.
 
 
 ### A projektről
 
-    A webapplikáció gombatermesztő házak és az azokban elhelyezett műszerek által mért értékek menedzseléséhez, kiértékeléséhez, és megtekintéséhez biztosít grafikus felületet a felhasználók számára.  
+A webapplikáció gombatermesztő házak és az azokban elhelyezett műszerek által mért értékek menedzseléséhez, kiértékeléséhez, és megtekintéséhez biztosít grafikus felületet a felhasználók számára. Minden ház 5 darab szenzort tartalmaz, melyek különböző értékeket mérnek. A gombaházak a rendszerben resourc-ként, míg a házakhoz tartozó egyes időpontokban történt, szenzoradatok dataset-ként szerepelnek.  
 
 ### Tesztelő alkalmazás
 
-    A tesztek a Postman API platform V11 verzióján kerülnek elvégzésre. A Postman egy általános API tesztelő eszköz mejnek segítségével, könnyen lehet HTTP API kéréseket létrehozni,tesztelni és dokumentálni. 
+A tesztek a Postman API platform V11 verzióján kerülnek elvégzésre. A Postman egy általános API tesztelő eszköz mejnek segítségével, könnyen lehet HTTP API kéréseket létrehozni,tesztelni és dokumentálni. 
 
-    A Postman rendelkezik beépített teljesítmény tesztelő modullal, ahol különbőző API kérések un. Collectionjait futtathatjuk, Performance módban, ahol számos beállítást tudunk megadni.
+A Postman rendelkezik beépített teljesítmény tesztelő modullal, ahol különbőző API kérések un. Collectionjait futtathatjuk, Performance módban, ahol számos beállítást tudunk megadni.
 
-    A teljesítmény tesztek virtuális felhasználókat szimulálnak amik a teszt ideje alatt az adott collectionban lévő HTTP kéréseket küldik folyamatosan és egymással párhuzamosan.
+A teljesítmény tesztek virtuális felhasználókat szimulálnak amik a teszt ideje alatt az adott collectionban lévő HTTP kéréseket küldik folyamatosan és egymással párhuzamosan.
 
 
 ![](postman-pelda.png)
@@ -25,26 +25,26 @@ A postman teljesítmény tesztelő felülete
 
 ### Tesztelő környezet
 
-    A project dockerizálva van ezáltan mindenhol kényelmesen futtatható. A tesztek is ezen a dockerizált verzión kerülnek elvégzésre.
+A project dockerizálva van ezáltan mindenhol kényelmesen futtatható. A tesztek is ezen a dockerizált verzión kerülnek elvégzésre.
 
-    A tesztkörnyezet fel van töltve mock adatokkal, a teszteléshez megfelelő mértékben.
+A tesztkörnyezet fel van töltve mock adatokkal, a teszteléshez megfelelő mértékben.
 
 ![](docker.png)
 A dockerben futó project
 
 ### A tesztelő számítógép adatai
 
-    A tesztelő gép adatai az alábbiak:
-        8 CPU mag
-        8GB RAM
+A tesztelő gép adatai az alábbiak:
+    8 CPU mag
+    8GB RAM
     
-    A Postman ilyen hardver mellett egyszerre maximum 100 virtuális usert tud szimulálni, a projekt jellege, okán azonban már ez is bőségesen sok, ahoz képest amit "élesben tapasztalhatunk".
+A Postman ilyen hardver mellett egyszerre maximum 100 virtuális usert tud szimulálni, a projekt jellege, okán azonban már ez is bőségesen sok, ahoz képest amit "élesben tapasztalhatunk".
 
 ### Teljesítmény mérési metrikák
 
-    A fő metrikák a kiadott kérések száma és az átlagos válaszidő (és ennek növekedése a terheléssel párhuzamosan), valamint a hibával vissza érkező kérések százalékos aránya lesz.
+A fő metrikák a kiadott kérések száma és az átlagos válaszidő (és ennek növekedése a terheléssel párhuzamosan), valamint a hibával vissza érkező kérések százalékos aránya lesz.
 
-    Ezeket a postman mind grafikonok mind mérési adatok formájában prezentálja számunkra.
+Ezeket a postman mind grafikonok mind mérési adatok formájában prezentálja számunkra.
 
 ## API Végpontok Tesztelése
 
@@ -169,20 +169,25 @@ Azért terheltük ennyivel jobban a rendszert ezen teszt során, mint éles hely
 
 ### 6. Teszt - Komplex kéréssorozat tesztelése
 
-Ezen teszt során...
+Ezen test során, egy több kérésből álló parancssorozatot hajtott végre minden egyes virtuális user. Itt az volt a megfontolás, hogy lássuk a rendszer, hogyan tud kezelni  egymástól különböző rendeltetésű kéréseket párhuzamosan. A teszt felépítése ezért követi a létrehozás,lekérés,változtatás,törlés sorrendet, hogy például mikor az egyik user törölni akar a másik pedig módosítani akkor milyen változások történnek perfomancia szempontból.
 
 Lépéssorozat:
 
-![](peak-complex-90VU-performancedetails.png)
+![](complex-test-request.png)
 
 
 #### Peak
 
-Azért Peak mert...
+Azért Peak tehrelési ív melett döntöttünk mert így jobban megfigyelhetőek az esetleges elétérése.
 
-Azért 90 VU mert...
+A teszt peak időszakban 90 virtuális userrel futott míg a non-peak időszakban 18-al, ennek oka hogy feltudjuk nagyítani az esetlegesen jelentkező teljesítmény különbségeket.
 
-Eredmény megmagyarázása, hogyan követte a latency az emelkedőt, milyen a stabilitása, max értéke, átlagos válaszideje...
+Jó közelítéssel megfigyelhető, hogy a latency az újonnan belépő userek számával együtt növekszik. A peak pont elérése előtt azonban drasztikusan beesek mind a kiadott kérések száma, mind a latency, ám amíg az utóbbi hamar felugrik, addig az előbbi továbbra is 0. A rendszer valószínűleg ekkor terhelődött ezáltal, nem érkeztek válaszok a kiadott kérésekre így újakat sem tudott küldeni.
+
+Különösen érdekes, hogy mikor a teszt második felében elkezd csökkeni a userek száma, a másodpercenként kiadott kérések száma növekedni kezd, és utána nem is csökken le a korábban látott módon. Ennek oka, hogy mivel kevesebb user küldi folyamatosan a kéréssorozat egyes elemeit, ezért csökken a latency aminek köszönhetően előbb tud a VU újabb kérést küldeni.
+
+Ebből a tesztből megállapítható, az ami az 5-ös tesztből is levonható volt, hogy a rendszer 20-körüli gombaház esetén üzemel optimálisan.
+
 
 ![](peak-complex-90VU-graph.png)
 
@@ -216,7 +221,7 @@ A maximális válaszidő azonban nagyon nagy volt ami már nem elfogadható QoS 
 
 ## Átfogó vélemény a tesztelérsről
 
-### Kovács Zoltán:
+### Kovács Zoltán
 
 Érdekes volt megtapasztalni, ezt az eddig teljesen ismeretlen, oldalát a szoftver tesztelésnek/vizsgálatnak. Új volt, hogy alaposabb utána járás után kiderült mennyire fontos, a tesztek dokumentációja, nem csak a konkrét teszt esetek tekintetében hanem már magánál a tesztelő környezetnél és a kezdő beállításoknál is.
 
