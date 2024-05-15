@@ -238,3 +238,14 @@ A Postmanre eddig mint egy egyszerű primitív API tesztelő eszközre gondoltam
 Visszatekintve örülök, hogy ezt az alfeladatot választottam, sokat tanultam belőle.
 
 
+## Források
+
+https://learning.postman.com/docs/introduction/overview/
+
+https://qacraft.com/test-documentation-in-software-testing/
+
+https://www.headspin.io/blog/a-performance-testing-guide
+
+https://testsigma.com/blog/performance-testing/
+
+https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/performing-solution-performance-testing-approach
