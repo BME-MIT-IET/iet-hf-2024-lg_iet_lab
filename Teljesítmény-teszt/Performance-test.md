@@ -156,11 +156,13 @@ Megfigyelendő, hogy a maximális várakozási idő már itt is bőven túllépi
 
 A tesztet 100 virtuális felhasználóval végeztük, ami a tesztelésre használt hardver eszköz maximuma volt. Azért dupláztuk meg az eddig használt felhasználó számot, hogy szimuláljuk, ahogy a sok különböző gombaház beli eszköz mérési adatokat rögzít a rendszerben.
 
-Fontos kiemelnünk, hogy ez messzemenően túlmutat azon a terhelésen aminek a rendszer a specifikációban körülmények között ki lenne téve. Egy gombaházban ugyanis nem 100 hanem jóval kevesebb műszer van, és nem folyamatosan rögzítenek mérési adatokat, hanem bizonyos időközönként.
+**Fontos:** Ezen tesztesetet a többivel ellentétben 2 percig futtattuk, kíváncsiak voltunk mennyire fogja leterhelni a rendszert ez az eset. Ennek a tesztnek a teljesítménye adja majd legnagyobb valószínűséggel a rendszer szűk keresztmetszetét teljesítmény szempontból, hisz ez a végpont lesz a legtöbbet használva.
+
+*Fontos kiemelnünk, hogy ez messzemenően túlmutat azon a terhelésen aminek a rendszer a specifikációban körülmények között ki lenne téve. Egy gombaházban ugyanis nem 100 hanem jóval kevesebb műszer van, és nem folyamatosan rögzítenek mérési adatokat, hanem bizonyos időközönként.*
 
 Ezekre a kérésekre a rendszer egész jól reagált stabilitás szempontjából, csak egy nagyobb ugrás látható a diagramon. A válaszidő maximuma most is kényelmetlenül magas lett; azonban ez majd nem okoz éles környezetben gondot mert ilyen nagyságrendű terhelésnek a rendszer sosem lesz kitéve.
 
-Azért terheltük ennyivel jobban a rendszert ezen teszt során, mint éles helyzetben lenne terhelve, hogy jó képet kapjunk maximális teljesítőképességéről.
+Azért terheltük ennyivel jobban a rendszert ezen teszt során, mint éles helyzetben lenne terhelve, hogy jó képet kapjunk maximális teljesítőképességéről ennek a gyakran használt végpontnak.
 
 ![](fixed-100VU-addDataSets.png)
 ![](fixed-100VU-body.png)
