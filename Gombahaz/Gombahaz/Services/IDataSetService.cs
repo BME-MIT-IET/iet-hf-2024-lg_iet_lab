@@ -6,7 +6,7 @@ namespace Gombahaz.Services
     public interface IDataSetService
     {
         public Task<DataSetItem> insertDataSet(DataSetItem datasetToInsert, int resourceId);
-        public Task<DataSetItem> getDataSetById(int id);
+        public Task<DataSetItem?> getDataSetById(int id);
 
         public Task<IEnumerable<DataSetItem>> getDataSetsByResourceId(int resourceId);
 
