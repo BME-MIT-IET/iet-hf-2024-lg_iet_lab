@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Gombahaz.csproj": {}
+    "C:\\Users\\len\\Desktop\\Lackó\\egyetem\\6.felev\\IET\\hf\\iet-hf-2024-lg_iet_lab\\Gombahaz\\Gombahaz\\Gombahaz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Gombahaz.csproj": {
+    "C:\\Users\\len\\Desktop\\Lackó\\egyetem\\6.felev\\IET\\hf\\iet-hf-2024-lg_iet_lab\\Gombahaz\\Gombahaz\\Gombahaz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Gombahaz.csproj",
+        "projectUniqueName": "C:\\Users\\len\\Desktop\\Lackó\\egyetem\\6.felev\\IET\\hf\\iet-hf-2024-lg_iet_lab\\Gombahaz\\Gombahaz\\Gombahaz.csproj",
         "projectName": "Gombahaz",
-        "projectPath": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\Gombahaz.csproj",
-        "packagesPath": "C:\\Users\\Tse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tse\\Desktop\\IET\\iet_hf\\Gombahaz\\Gombahaz\\obj\\",
+        "projectPath": "C:\\Users\\len\\Desktop\\Lackó\\egyetem\\6.felev\\IET\\hf\\iet-hf-2024-lg_iet_lab\\Gombahaz\\Gombahaz\\Gombahaz.csproj",
+        "packagesPath": "C:\\Users\\len\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\len\\Desktop\\Lackó\\egyetem\\6.felev\\IET\\hf\\iet-hf-2024-lg_iet_lab\\Gombahaz\\Gombahaz\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\len\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

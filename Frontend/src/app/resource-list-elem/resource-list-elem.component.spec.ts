@@ -21,3 +21,5 @@ describe('ResourceListElemComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
