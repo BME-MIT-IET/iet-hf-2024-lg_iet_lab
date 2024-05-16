@@ -1,5 +1,5 @@
 //add resource kérésnél, a post-response scripthez:
-var responsedata =pm.response.json();
+let responsedata =pm.response.json();
 let id=responsedata.id;
 pm.environment.set("komplextestResId",id);
 
