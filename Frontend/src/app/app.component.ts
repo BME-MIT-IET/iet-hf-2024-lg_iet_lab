@@ -9,7 +9,6 @@ import { PopUpWindowComponent } from './pop-up-window/pop-up-window.component';
   standalone: true,
   imports: [RouterOutlet, ResourceListComponent, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Frontend';
