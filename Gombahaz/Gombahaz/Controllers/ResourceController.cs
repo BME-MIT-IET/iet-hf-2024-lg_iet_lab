@@ -107,7 +107,7 @@ namespace Gombahaz.Controllers
                     return NotFound();
 
                 ResourceDTO returnInDTO = ResourceMapper.entityToDTO(updatedResource);
-                return Ok(resourceToUpdate);
+                return Ok(returnInDTO);
             }
             catch(Exception ex)
             {

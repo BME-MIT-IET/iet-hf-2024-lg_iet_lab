@@ -18,12 +18,9 @@ namespace Gombahaz.Services
             this.datasetRepository = _datasetRepository;
             this.resourceRepository = resourceRepository;
         }
-        public async Task<DataSetItem> getDataSetById(int id)
+        public async Task<DataSetItem?> getDataSetById(int id)
         {
             DataSetItem? retrievedDataSet =  await datasetRepository.getDataSetById(id);
-            
-            if (retrievedDataSet == null)
-                throw new Exception($"Element with id={id} is not found!");
 
             return retrievedDataSet;
         }
