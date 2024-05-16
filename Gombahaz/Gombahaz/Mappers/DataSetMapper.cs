@@ -17,7 +17,7 @@ namespace Gombahaz.Mappers
                 COLevel= dataSetItem.COLevel,
                 SoilMoisture = dataSetItem.SoilMoisture,
                 SoilTemperature = dataSetItem.SoilTemperature,
-                ResourceId = dataSetItem.Id
+                ResourceId = dataSetItem.ResourceId
             };
         }
 
