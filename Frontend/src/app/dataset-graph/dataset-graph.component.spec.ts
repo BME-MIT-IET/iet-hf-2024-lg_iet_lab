@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { DatasetGraphComponent } from './dataset-graph.component';
-
+/**
+ * Hasonlo mint a resource list componensnél.
+ * 
+ */

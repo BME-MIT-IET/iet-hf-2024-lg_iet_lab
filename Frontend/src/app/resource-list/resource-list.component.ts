@@ -113,7 +113,7 @@ export class ResourceListComponent implements OnInit{
 		});
     }
 
-	/**
+	/*
 	 * Opens the resource form for modification with the resource's data the user clicked on.
 	 * 
 	 * Opens the ResourceFormComponent for the modification of the selected resource.

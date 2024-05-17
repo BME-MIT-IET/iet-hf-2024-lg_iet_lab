@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ResourceListComponent } from './resource-list.component';
-import { HttpBackend, HttpClient } from '@angular/common/http';
-
+/**
+ * A tesztek létrehozására be kellene nyúlni a resource_list.component.ts komponensbe
+ * Lehet van másik megoldás, de azt nem tudtam megcsinálni
+ * 
+ */

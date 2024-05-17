@@ -2,10 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ResourceListElemComponent } from './resource-list-elem.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ResourceService } from '../resource.service';
-import { of, throwError } from 'rxjs';
-import { PopUpWindowComponent } from '../pop-up-window/pop-up-window.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
@@ -39,7 +36,6 @@ describe('ResourceListElemComponent', () => {
         { provide: MatDialog, useValue: matDialogSpy },
         { provide: ActivatedRoute, useValue: {} }
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
 
     resourceService = TestBed.inject(ResourceService) as jasmine.SpyObj<ResourceService>;
@@ -70,5 +66,12 @@ describe('ResourceListElemComponent', () => {
     expect(component.navigate.emit).toHaveBeenCalled();
   });
 
- 
+  it('header-title with resource name ', () => {
+    const bannerElement: HTMLElement = fixture.nativeElement;
+    const matPanelTitle = bannerElement.querySelector('.header-title')!;
+    expect(matPanelTitle.textContent).toContain('Test Resource');
+  });
+
+
+
 });
