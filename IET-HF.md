@@ -1,3 +1,3 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/XwNCTfYP)
 
-
+A projekt célja megbizonyosodni arról, hogy a webapplikáció frontend felületén a UI kialakítása megfelelően lett-e elvégezve, Angular-ba beépített UI tesztek alkalmazásával, valamint a programkód vizsgálata refaktorálási és clean code szempontból, hogy amennyiben cél az applikáció továbbfejlesztése, úgy ez ne essen nehezére a fejlesztőknek. Az applikáció back-end részén pedig az API végpontok tesztelésére, illetve az (adatbázis is igénylő) teljesítmény tesztelése a cél, hogy meg lehessen bizonyosodni arról, hogy az adatok megfelelő formátumban kerülnek kiküldésre a szerver részéről, valamint az adatbázis, és a back-end képes-e kiszoláglni akár potenciálisan nagy számú felhasználótömeget, ezzel felkészítve a programot valós környezetben előforduló helyzetekre.
