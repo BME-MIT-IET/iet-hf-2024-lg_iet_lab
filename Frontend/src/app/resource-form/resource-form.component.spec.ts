@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ResourceFormComponent } from './resource-form.component';
 import { CommonModule } from '@angular/common';
@@ -28,8 +27,8 @@ describe('ResourceFormComponent', () => {
             BrowserAnimationsModule,        
       ],
       providers: [
-        { provide: MatDialogRef, useValue: {} }, // Mock MatDialogRef
-        { provide: MAT_DIALOG_DATA, useValue: {} } // Mock MAT_DIALOG_DATA
+        { provide: MatDialogRef, useValue: {} }, 
+        { provide: MAT_DIALOG_DATA, useValue: {} } 
       ]
     })
     .compileComponents();

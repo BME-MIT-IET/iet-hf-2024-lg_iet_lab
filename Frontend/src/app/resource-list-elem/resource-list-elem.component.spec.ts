@@ -6,15 +6,12 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute} from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { ActivatedRoute } from '@angular/router';
 
 describe('ResourceListElemComponent', () => {
   let component: ResourceListElemComponent;
   let fixture: ComponentFixture<ResourceListElemComponent>;
-  let resourceService: jasmine.SpyObj<ResourceService>;
-  let matDialog: jasmine.SpyObj<MatDialog>;
 
   beforeEach(waitForAsync(() => {
     const resourceServiceSpy = jasmine.createSpyObj('ResourceService', ['deleteResource']);
@@ -38,8 +35,6 @@ describe('ResourceListElemComponent', () => {
       ],
     }).compileComponents();
 
-    resourceService = TestBed.inject(ResourceService) as jasmine.SpyObj<ResourceService>;
-    matDialog = TestBed.inject(MatDialog) as jasmine.SpyObj<MatDialog>;
   }));
 
   beforeEach(() => {

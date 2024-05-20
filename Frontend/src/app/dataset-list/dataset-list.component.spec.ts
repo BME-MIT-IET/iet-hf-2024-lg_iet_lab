@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { DatasetListComponent } from './dataset-list.component';
-import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
-import { of, throwError } from 'rxjs';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import { of } from 'rxjs';
 import { DatasetService } from '../dataset.service';
-import { MatDialogModule, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -11,20 +11,17 @@ import { ProgressSpinnerComponent } from '../progress-spinner/progress-spinner.c
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { PopUpWindowComponent } from '../pop-up-window/pop-up-window.component';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('DatasetListComponent', () => {
   let component: DatasetListComponent;
   let fixture: ComponentFixture<DatasetListComponent>;
   let mockDatasetService: jasmine.SpyObj<DatasetService>;
-  let mockRouter: Router;
 
 
 
   beforeEach(waitForAsync(() => {
     mockDatasetService = jasmine.createSpyObj('DatasetService', ['getDatasetForResource']);
-    mockRouter = jasmine.createSpyObj('Router', ['navigate']);
 
     TestBed.configureTestingModule({
 
