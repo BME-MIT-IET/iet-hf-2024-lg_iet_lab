@@ -3,7 +3,7 @@
         <mat-icon class="toolbar-icon">trending_up</mat-icon>
         <span class="toolbar-title">{{resourceName}}</span>
         <span class="spacing"></span>
-        <button mat-icon-button (click)="openDatePickerDialog()">
+        <button class="date-picker-button" mat-icon-button (click)="openDatePickerDialog()">
             <mat-icon>date_range</mat-icon>
         </button>
         <button mat-icon-button (click)="progressSpinnerDisplayed=true" [routerLink]="['/resources',resourceId,'datasets',{resourceName: resourceName}]">

@@ -3,6 +3,6 @@
  {{body}}
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button *ngIf="hasCancel" mat-button mat-dialog-close color="warn" (click)="buttonCancelClicked()">{{btnCancelText.toUpperCase()}}</button>
-    <button color="primary" mat-button (click)="buttonConfirmClicked()" cdkFocusInitial mat-dialog-close>{{btnConfirmText.toUpperCase()}}</button>
+    <button class="cancel-button" *ngIf="hasCancel" mat-button mat-dialog-close color="warn" (click)="buttonCancelClicked()">{{btnCancelText.toUpperCase()}}</button>
+    <button class="confirm-button" color="primary" mat-button (click)="buttonConfirmClicked()" cdkFocusInitial mat-dialog-close>{{btnConfirmText.toUpperCase()}}</button>
 </mat-dialog-actions>
